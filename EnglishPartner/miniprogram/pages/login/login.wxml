@@ -10,4 +10,4 @@
   确认登录
   </button>
 </view>
-<view wx:else>请升级微信版本</view>
+<view class='upgrade' wx:else>请升级微信版本</view>
