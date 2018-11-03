@@ -23,10 +23,11 @@
     margin-top: 40rpx;
 }
 
-.bottom{
-  border-radius: 80rpx;
+.buttonlogin{
+  border-radius: 40rpx;
   margin: 70rpx 50rpx;
   font-size: 35rpx;
+  border: none;
 }
 .upgrade{
 text-align: center;
