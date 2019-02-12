@@ -7,13 +7,15 @@ Page({
     // 查看是否授权
     wx.getSetting({
       success: function (res) {
-        console.log(res);
+        console.log('getSetting',res);  
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function (res) {
               //从数据库获取用户信息
               //that.queryUsreInfo();
               //用户已经授权过
+              getApp().globalData.userInfo = res.userInfo;
+              console.log('getUserInfo', getApp().globalData.userInfo);
               wx.redirectTo({
                 url: '../index/index'
               })
@@ -79,7 +81,8 @@ Page({
       },
       success: function (res) {
         console.log(res.data);
-        getApp().globalData.userInfo = res.data;
+        getApp().globalData.userInfo = res.userInfo;
+        console.log(getApp().globalData.userInfo);
       }
     }) 
   },

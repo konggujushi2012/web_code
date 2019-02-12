@@ -2,7 +2,7 @@
 <view class="container">
 
   <!-- 用户 openid -->
-  <view class="userinfo">
+  <!--<view class="userinfo">
     <button 
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
@@ -13,31 +13,52 @@
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
   </view>
+  <view>
+    <button class="test">test</button>
+  </view>-->
 
 
   <!-- 上传图片 -->
-  <view class="uploader">
+  <!--<view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
       <text>上传图片</text>
     </view>
     <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
-  </view>
+  </view>-->
 
 
   <!-- 操作数据库 -->
-  <view class="uploader">
+  <!--<view class="uploader">
     <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
       <text>前端操作数据库</text>
     </navigator>
-  </view>
+  </view>-->
 
   <!-- 新建云函数 -->
-  <view class="uploader">
+  <!--<view class="uploader">
     <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
       <text>快速新建云函数</text>
     </navigator>
+  </view>-->
+  <view class="main-content">
+    <text class="content-title">
+      欢迎您参加21天英语合伙人
+    </text>
+    <text class="game-rule">
+      活动规则如下：
+      1、填写下方的报名表，我们需要您的真实信息来为您匹配合适的合伙人。
+      2、报名需要交99元押金，我们认为交押金并且赎回的方式能够给您的学习提供更多的动力。
+      3、提交报名表后，3个工作日内，我们会为您匹配英语水平相当的合伙人。
+      4、匹配成功的第二天开始，我们将在微信公众号“说好英语”中发布每天的任务。
+      5、成为合伙人的双方，需要每天完成发布的任务，并且相互监督打卡。
+      6、完成任务后，在“说好英语”公众号中点击打卡，并且将打卡截图发送到朋友圈，此流程完成后才算打卡成功。
+      7、21天任务完成后，我们将返还您的押金，如果中间出现一次及以上的不打卡，那么押金将不会返还。
+
+      如有任何疑问，请联系微信公众号：说好英语。
+    </text>
+    <button class="button-confirm" bindtap="confirmJoin">确定参加</button>
   </view>
 
 </view>

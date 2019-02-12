@@ -1,0 +1,72 @@
+<view class="join-form">
+  <form bindsubmit="formSubmit">
+    <view class="section section_gap">
+      <view class="section__title">
+        <label class="title-nickname item-title">昵称</label>
+        <label class="required">*</label>
+      </view>
+      <input class="nickname input_info" name="nickname" placeholder="" value="{{nickname}}" />
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">
+        <label class="title-sex item-title">性别</label>
+        <label class="required">*</label>
+      </view>
+      <radio-group class="input_info radio-sex" bindchange="radioChange" name="sex">
+        <label class="label_sex" wx:for="{{sex}}">
+          <label wx:if="{{gender == 1 && item.value == 'man'}}">
+            <radio value="{{item.value}}" checked="{{true}}" />
+            {{item.name}}
+          </label>
+          <label wx:elif="{{gender == 2 && item.value == 'woman'}}">
+            <radio value="{{item.value}}" checked="{{true}}" />
+            {{item.name}}
+          </label>
+          <label wx:else>
+            <radio value="{{item.value}} " />
+            {{item.name}}
+          </label>
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="section">
+      <view class="section__title">
+        <label class="title-wechat item-title">微信号</label>
+        <label class="required">*</label>
+      </view>
+      <input name="wechat" placeholder="请输入您的微信号" class="input_info" />
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">
+        <label class="title-level item-title">英语水平</label>
+        <label class="required">*</label>
+      </view>
+      <picker bindchange="bindLevelChange" value="{{index}}" range="{{english_level}}" class="input_info picker" name="level">
+        <view class="picker_item">
+        {{english_level[current_level_index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">
+        <label class="title-purpose item-title">学习目的</label>
+        <label class="required">*</label>
+      </view>
+      <picker bindchange="bindPurposeChange" value="{{index}}" range="{{purpose}}" class="input_info picker" name="purpose">
+        <view class="picker_item">
+        {{purpose[current_purpose_index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">
+        <label class="title-message item-title">您的留言</label>
+      </view>
+      <textarea placeholder="请写下你想说的话" class="input_info text_message" name="message"/>
+    </view>
+    <view class="btn-area">
+      <button form-type="submit" class="button_submit">提交</button>
+    </view>
+  </form>
+</view>

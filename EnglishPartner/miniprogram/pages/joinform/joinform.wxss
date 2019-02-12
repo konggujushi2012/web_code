@@ -1,0 +1,43 @@
+.join-form
+{
+  font-size:14px;
+  margin:0rpx 20rpx;
+}
+.required
+{
+  color:red;
+}
+
+.section
+{
+  margin-top:10px;
+}
+.button_submit
+{
+  background-color:#1aac19;
+  color:white;
+  margin-top:40rpx;
+}
+.input_info
+{
+  margin-top:5rpx;
+  border: 1rpx solid #dadada;
+  height: 80rpx;
+  min-height: 80rpx;
+  border-radius: 5px;
+}
+.radio-sex
+{
+  border: none;
+}
+.picker
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text_message
+{
+  height:150rpx;
+  width: auto;
+}
