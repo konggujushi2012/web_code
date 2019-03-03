@@ -3,18 +3,30 @@
     "pages/login/login",
     "pages/index/index",
     "pages/joinform/joinform",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
+    "pages/home/home",
+    "pages/me/me"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#fcfef0",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#fcfef0",
     "navigationBarTitleText": "21天英语合伙人",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "images/home_gray.png",
+        "selectedIconPath": "images/home_green.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/user_gray.png",
+        "selectedIconPath": "images/user_green.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
   }
 }

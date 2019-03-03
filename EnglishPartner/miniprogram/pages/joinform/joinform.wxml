@@ -5,7 +5,7 @@
         <label class="title-nickname item-title">昵称</label>
         <label class="required">*</label>
       </view>
-      <input class="nickname input_info" name="nickname" placeholder="" value="{{nickname}}" />
+      <input class="nickname input_info" name="nickname" placeholder="" value="{{nickname}}" disabled="true" />
     </view>
     <view class="section section_gap">
       <view class="section__title">

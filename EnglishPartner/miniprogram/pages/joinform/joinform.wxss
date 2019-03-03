@@ -2,6 +2,7 @@
 {
   font-size:14px;
   margin:0rpx 20rpx;
+  /* background-color:#fcfef0; */
 }
 .required
 {

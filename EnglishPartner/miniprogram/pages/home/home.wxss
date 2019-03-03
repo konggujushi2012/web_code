@@ -1,0 +1,95 @@
+.container{
+  background-color: #a4d091;
+  height: 100vh;
+}
+.home-title{
+  margin:auto;
+  margin-top: 30rpx;
+  font-size:16px;
+  color:white;
+  width: 200rpx;
+  height:60rpx;
+  background-color: #ff9800;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panel-apply
+{
+  background-color: #fcfef0;
+  background-image: url('https://www.runtimego.com/wp-content/uploads/2019/03/apply_bg.png');
+  background-size:100% 100%;
+  margin-top:30rpx;
+  width:90vw;
+  border-radius: 20rpx;
+  height: 40vh;
+}
+.button-apply{
+  margin-top: 50rpx;
+  width:300rpx;
+  height:80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reminder{
+  font-size: 18px;
+  font-weight: bold;
+  padding-top:50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.introducer{
+  font-size:14px;
+  margin-top:30rpx;
+}
+.introducer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.introduce-rule{
+  margin-top: 20rpx;
+  font-size: 12px;
+  color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity-process{
+  /* background-image: url('https://www.runtimego.com/wp-content/uploads/2019/03/apply_bg.png')
+  background-size:100% 100%;*/
+  margin-top:30rpx;
+  background-color: #fcfef0;
+  width:90vw;
+  border-radius: 20rpx;
+  height: 360rpx;
+}
+.step{
+  height: 120rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+}
+.step3
+{
+  border:none;
+}
+.step-title{
+  font-size: 14px;
+  text-align: left;
+  width:50vw;
+}
+.step-time{
+  font-size: 12px;
+  color:#474646;
+  text-align: right;
+  width: 50vw;
+}

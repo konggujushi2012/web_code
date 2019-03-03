@@ -26,18 +26,58 @@ Page({
   formSubmit(e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
     console.log('userinfo:', getApp().globalData.userInfo);
-    var post = e.detail.value;
-    wx.request({
-      url: 'https://www.runtimego.com/wp-json/wp/v2/posts', // 仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
+    if (e.detail.value['wechat'] == '')
+    {
+      wx.showModal({
+        title: '微信号为空',
+        content: '微信号是您的身份凭证，请填写您的真实微信号！',
+        showCancel:false
+      })
+      return;
+    }
+    if(this.data.current_level_index == 0)
+    {
+      wx.showModal({
+        title: '未选择英语水平',
+        content: '请选择您自己的英语水平，以便更好地匹配合适的合伙人！',
+        showCancel: false
+      })
+      return;
+    }
+    if (this.data.current_purpose_index == 0) {
+      wx.showModal({
+        title: '未选择学习目的',
+        content: '请选择您学习英语的目的，以便更好地匹配合适的合伙人！',
+        showCancel: false
+      })
+      return;
+    }
+    var post = getApp().globalData.userInfo;
+    post['wechat'] = e.detail.value['wechat'];
+    post['level'] = e.detail.value['level'];
+    post['purpose'] = e.detail.value['purpose'];
+    post['message'] = e.detail.value['message'];
+    post['telephone'] = '';
+    console.log(post);
+    wx.login({
       success(res) {
-        console.log(res.data)
+        if (res.code) {
+          post['code'] = res.code;
+          // 发起网络请求
+          wx.request({
+            url: 'https://www.runtimego.com/wp-json/english-partner/v1/partners',
+            method: 'POST',
+            data: post,
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success(res) {
+              console.log(res.data)
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
       }
     })
   },
