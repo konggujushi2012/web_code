@@ -6,7 +6,14 @@ Page({
     user_status:0
   },
   onLoad: function (options) {
-    
+    this.setData({
+      user_status: app.globalData.user_status
+    })
+  },
+  onShow: function(){
+    this.setData({
+      user_status: app.globalData.user_status
+    })
   },
   signup(e){
     var userName = app.globalData.userInfo.nickName;

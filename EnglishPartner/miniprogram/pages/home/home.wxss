@@ -5,6 +5,7 @@
 .home-title{
   margin:auto;
   margin-top: 30rpx;
+  margin-bottom: 0rpx;
   font-size:16px;
   color:white;
   width: 200rpx;
@@ -92,4 +93,23 @@
   color:#474646;
   text-align: right;
   width: 50vw;
+}
+.apply-status{
+  padding-top: 50rpx;
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status-content{
+  margin-top: 30rpx;
+  font-size: 16px;
+}
+.content-section{
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

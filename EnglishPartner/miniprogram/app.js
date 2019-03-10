@@ -1,7 +1,8 @@
 //app.js
 App({
   globalData: {
-    userInfo:{}
+    userInfo:{},
+    user_status: 0
   },
   onLaunch: function () {
     

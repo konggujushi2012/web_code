@@ -10,34 +10,42 @@
       <button type="primary" bindtap="signup" class="button-apply">立即参加</button>
       <navigator url="../index/index" class="introduce-rule">了解合伙人规则>></navigator>
     </view>
-    <view class="home-title">活动流程</view>
-    <view class="activity-process">
-      <view class="step step1">
-        <label class="step-title">Step 1 自由报名</label>
-        <label class="step-time" for="button-step1">周五 12点结束 >>
-          <button id="button-step1" bindtap="Step1Click"></button>
-        </label>
-      </view>
-      <view class="step step2">
-        <label class="step-title">Step 2 系统匹配</label>
-        <label class="step-time" for="button-step2">周五 12点开始 >>
-          <button id="button-step2" bindtap="Step2Click"></button>
-        </label>
-      </view>
-      <view class="step step3">
-        <label class="step-title">Step 3 活动开始</label>
-        <label class="step-time" for="button-step3">周五 20点开始 >>
-          <button id="button-step3" bindtap="Step3Click"></button>
-        </label>
-      </view>
-    </view>
   </view>
   <view wx:elif="{{user_status == 1}}">
-    已参加，正在匹配
+    <view class="home-title">活动状态</view>
+    <view class="panel-apply">
+      <view class="apply-status">success</view>
+      <view class="status-content">
+        <view class="content-section">您已报名成功</view>
+        <view class="content-section">本周五晚8点公布结果</view>
+        <view class="content-section">请耐心等待</view>
+      </view>
+    </view>
   </view>
   <view wx:elif="{{user_status == 2}}">
   </view>
   <view wx:elif="{{user_status == 3}}">
   </view>
   <view wx:else></view>
+  <view class="home-title">活动流程</view>
+  <view class="activity-process">
+    <view class="step step1">
+      <label class="step-title">Step 1 自由报名</label>
+      <label class="step-time" for="button-step1">周五 12点结束 >>
+        <button id="button-step1" bindtap="Step1Click"></button>
+      </label>
+    </view>
+    <view class="step step2">
+      <label class="step-title">Step 2 系统匹配</label>
+      <label class="step-time" for="button-step2">周五 12点开始 >>
+        <button id="button-step2" bindtap="Step2Click"></button>
+      </label>
+    </view>
+    <view class="step step3">
+      <label class="step-title">Step 3 活动开始</label>
+      <label class="step-time" for="button-step3">周五 20点开始 >>
+        <button id="button-step3" bindtap="Step3Click"></button>
+      </label>
+    </view>
+  </view>
 </view>

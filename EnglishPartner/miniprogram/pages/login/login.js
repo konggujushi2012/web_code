@@ -65,9 +65,13 @@ Page({
               const self = this
               console.log(res.data);
               if (res.data['code'] == 0) {
-
+                getApp().globalData.user_status = 1;
+                wx.switchTab({
+                  url: '../home/home'
+                })
               }
               else {
+                getApp().globalData.user_status = 0;
                 wx.switchTab({
                   url: '../home/home'
                 })

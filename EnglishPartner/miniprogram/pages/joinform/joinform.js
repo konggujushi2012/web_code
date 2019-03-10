@@ -72,7 +72,29 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success(res) {
-              console.log(res.data)
+              if(res.data['code'] == 0)
+              {
+                wx.showModal({
+                  title: '报名成功',
+                  content: '您已成功报名，请等待系统匹配！',
+                  showCancel: false,
+                  success: function(e)
+                  {
+                    getApp().globalData.user_status = 1;
+                    wx.switchTab({
+                      url: '../home/home'
+                    })
+                  }
+                })
+              }else{
+                wx.showModal({
+                  title: '报名失败',
+                  content: '未报名成功，请联系管理员！',
+                  showCancel: false,
+                  success: function (e) {
+                  }
+                })
+              }
             }
           })
         } else {
