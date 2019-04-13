@@ -1,0 +1,14 @@
+<view class='container'>
+  <view class="connect-us">
+    <view class='connect-method'>
+      <view class="method-title">方法一：添加管理员微信</view>
+      <!-- <image src="../../images/manager_wechat.jpg" class='QR-Code' bindtap='PreviewImage'></image> -->
+      <image src="{{manager_image_url}}" data-src="{{manager_image_url}}" class='QR-Code' bindtap='PreviewImage'></image>
+    </view>
+    <view class='connect-method'>
+      <view class="method-title">方法二：关注公众号后台留言</view>
+      <image src="{{public_account_url}}" data-src="{{public_account_url}}" class='QR-Code' bindtap='PreviewImage'></image>
+    </view>
+  </view>
+  <view class='title-tips'>小贴士：点击图片预览大图，然后长按保存到相册</view>
+</view>

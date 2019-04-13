@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "21天英语合伙人"
+  "navigationBarTitleText": "21天英语同桌",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

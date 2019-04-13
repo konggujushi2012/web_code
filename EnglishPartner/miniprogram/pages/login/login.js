@@ -24,15 +24,22 @@ Page({
       }
     })
   },
+  onShow: function(){
+    var that = this;
+  },
   bindGetUserInfo: function (e) {
     console.log(e);
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
       var that = this;
+      wx.getUserInfo({
+        success: function (res) {
+          getApp().globalData.userInfo = res.userInfo;
+          console.log('bindGetUserInfo', getApp().globalData.userInfo);
+        }
+      });
       //授权成功后，跳转进入小程序首页
-      wx.redirectTo({
-        url: '../home/home'
-      })
+      that.signupEnglishPartner();
     } else {
       //用户按了拒绝按钮
       wx.showModal({
@@ -50,6 +57,9 @@ Page({
   },
   signupEnglishPartner: function(e)
   {
+    wx.showLoading({
+      title: '加载中',
+    });
     wx.login({
       success: function (res) {
         if (res.code) {
@@ -65,26 +75,30 @@ Page({
               const self = this
               console.log(res.data);
               if (res.data['code'] == 0) {
-                getApp().globalData.user_status = 1;
+                getApp().globalData.partnerInfo = res.data['partner_data'];
+                getApp().globalData.applyInfo = res.data['apply_data'];
+                getApp().globalData.user_status = res.data['apply_data']['current_status'];
+                wx.hideLoading();
                 wx.switchTab({
                   url: '../home/home'
                 })
               }
               else {
                 getApp().globalData.user_status = 0;
+                wx.hideLoading();
                 wx.switchTab({
                   url: '../home/home'
                 })
               }
             },
             fail: function (res) {
-
+              wx.hideLoading();
             }
           })
         }
       },
       fail: function (res) {
-
+        wx.hideLoading();
       }
     })
   }

@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="basic_info">
+    <view class='info-item avatar'>
+      <view class="item-title">头像</view>
+      <label class="item-content" for="button-detail">
+        <image class='user-avatar' src='{{userInfo.avatarUrl}}'></image>
+        <button id="button-detail" bindtap="Step2Click"></button>
+      </label>
+    </view>
+    <view class='info-item nickname'>
+      <view class="item-title">昵称</view>
+      <label class="item-content" for="button-detail">
+        {{userInfo.nickName}}
+        <button id="button-detail" bindtap="Step2Click"></button>
+      </label>
+    </view>
+    <view class='info-item gender'>
+      <view class="item-title">性别</view>
+      <label class="item-content" for="button-detail">
+        <view wx:if="{{userInfo.gender == 1}}">男</view>
+        <view wx:elif="{{userInfo.gender == 2}}">男</view>
+        <view wx:else>未知</view>
+        <button id="button-detail" bindtap="Step2Click"></button>
+      </label>
+    </view>
+    <view class='info-item location'>
+      <view class="item-title">所在地</view>
+      <label class="item-content" for="button-detail">
+        {{userInfo.province}} {{userInfo.city}}
+        <button id="button-detail" bindtap="Step2Click"></button>
+      </label>
+    </view>
+  </view>
+  <view class="apply_info">
+    <view wx:if="0">
+      <label>尚无报名信息</label>
+    </view>
+    <view wx:else>
+    </view>
+  </view>
+</view>

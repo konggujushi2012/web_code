@@ -1,0 +1,7 @@
+<view class='container'>
+  <view class="history-show">
+    <view wx:if="{{current_status == 0}}">
+      <view class=''>尚无参与历史</view>
+    </view>
+  </view>
+</view>

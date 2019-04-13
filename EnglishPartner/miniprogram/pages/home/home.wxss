@@ -103,6 +103,15 @@
   align-items: center;
   justify-content: center;
 }
+.status-failed{
+  padding-top: 50rpx;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .status-content{
   margin-top: 30rpx;
   font-size: 16px;
@@ -112,4 +121,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.partner-wechat{
+  margin-top:10px;
+  font-size: 18px;
+  color:#be0000;
+  font-weight: bold;
 }

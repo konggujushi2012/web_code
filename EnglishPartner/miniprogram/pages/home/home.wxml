@@ -2,13 +2,13 @@
   <view wx:if="{{user_status == 0}}">
     <view class="home-title">活动状态</view>
     <view class="panel-apply">
-      <view class="reminder">您尚未参与英语合伙人</view>
+      <view class="reminder">您尚未参与英语同桌活动</view>
       <view class="introducer">
-        <view class="introducer-content">来这里找到你的合伙人</view>
+        <view class="introducer-content">来这里找到你的同桌</view>
         <view class="introducer-content">用21天时间提高自己的英语水平</view>
       </view>
       <button type="primary" bindtap="signup" class="button-apply">立即参加</button>
-      <navigator url="../index/index" class="introduce-rule">了解合伙人规则>></navigator>
+      <navigator url="../index/index" class="introduce-rule">了解同桌规则>></navigator>
     </view>
   </view>
   <view wx:elif="{{user_status == 1}}">
@@ -23,6 +23,25 @@
     </view>
   </view>
   <view wx:elif="{{user_status == 2}}">
+    <view class="home-title">活动状态</view>
+    <view class="panel-apply">
+      <view wx:if="{{partner != ''}}">
+        <view class="apply-status">匹配成功</view>
+        <view class="status-content">
+          <view class="content-section">您的同桌已匹配成功</view>
+          <view class="content-section">请尽快添加您的同桌微信：</view>
+          <view class="content-section partner-wechat">{{partner}}</view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="status-failed">匹配失败</view>
+        <view class="status-content">
+          <view class="content-section">您没有匹配到合适的同桌</view>
+          <view class="content-section">可能是参加人数为单数，您落单了</view>
+          <view class="content-section">请尽快联系管理员处理</view>
+        </view>
+      </view>
+    </view>
   </view>
   <view wx:elif="{{user_status == 3}}">
   </view>

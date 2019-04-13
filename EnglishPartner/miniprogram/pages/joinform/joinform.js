@@ -39,7 +39,7 @@ Page({
     {
       wx.showModal({
         title: '未选择英语水平',
-        content: '请选择您自己的英语水平，以便更好地匹配合适的合伙人！',
+        content: '请选择您自己的英语水平，以便更好地匹配合适的同桌！',
         showCancel: false
       })
       return;
@@ -47,7 +47,7 @@ Page({
     if (this.data.current_purpose_index == 0) {
       wx.showModal({
         title: '未选择学习目的',
-        content: '请选择您学习英语的目的，以便更好地匹配合适的合伙人！',
+        content: '请选择您学习英语的目的，以便更好地匹配合适的同桌！',
         showCancel: false
       })
       return;

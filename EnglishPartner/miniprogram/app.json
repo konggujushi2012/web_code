@@ -4,13 +4,16 @@
     "pages/index/index",
     "pages/joinform/joinform",
     "pages/home/home",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/information/information",
+    "pages/joinhistory/joinhistory",
+    "pages/connectus/connectus"
   ],
   "window": {
     "backgroundColor": "#fcfef0",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fcfef0",
-    "navigationBarTitleText": "21天英语合伙人",
+    "navigationBarTitleText": "21天英语同桌",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

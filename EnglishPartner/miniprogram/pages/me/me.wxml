@@ -1,0 +1,46 @@
+<view class="container">
+  <view class='user-info'>
+    <view class='basic-info'>
+      <open-data class='avatar' type="userAvatarUrl"></open-data>
+      <open-data class='nickname' type="userNickName"></open-data>
+    </view>
+    <label class='detail' for="button-info">个人资料>
+      <button id="button-info" bindtap='PersonalInfo'></button>
+    </label>
+  </view>
+  <view class='function-area'>
+    <view class='function-item join-record'>
+      <view class='item-title'>
+        <image class='item-icon' src='../../images/Notepad.png' mode='scaleToFill'></image>
+        <view class='title-content'>参与历史</view>
+      </view>
+      <label class='right-arrow' for="join_history">
+        <image class='arrow-icon' src='../../images/right_gray.png' mode='scaleToFill'>
+        <button id="join_history" bindtap='JoinHistoryClicked'></button>
+        </image>
+      </label>
+    </view>
+    <view class='function-item invite-friend'>
+      <view class='item-title'>
+        <image class='item-icon' src='../../images/invite.png' mode='scaleToFill'></image>
+        <view class='title-content'>邀请好友</view>
+      </view>
+      <label class='right-arrow' for="invite_friend">
+        <image class='arrow-icon' src='../../images/right_gray.png' mode='scaleToFill'>
+        </image>
+        <button id="invite_friend" bindtap='InviteFriendClicked'></button>
+      </label>
+    </view>
+    <view class='function-item contact-us'>
+      <view class='item-title'>
+        <image class='item-icon' src='../../images/contact.png' mode='scaleToFill'></image>
+        <view class='title-content'>联系我们</view>
+      </view>
+      <label class='right-arrow' for="connect_us">
+        <image class='arrow-icon' src='../../images/right_gray.png' mode='scaleToFill'>
+        </image>
+        <button id='connect_us' bindtap='ConnectUsClicked'></button>
+      </label>
+    </view>
+  </view>
+</view>

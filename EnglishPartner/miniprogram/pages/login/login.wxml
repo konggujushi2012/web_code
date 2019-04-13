@@ -3,7 +3,7 @@
     <image src='../../images/logo.png'></image>
   </view>
   <view class='content'>
-    <view>即将登录英语合伙人</view>
+    <view>即将登录英语同桌</view>
     <text>使用当前微信账号登录此应用</text>
   </view>
   <button class='buttonlogin' type='primary' open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='bindGetUserInfo'>

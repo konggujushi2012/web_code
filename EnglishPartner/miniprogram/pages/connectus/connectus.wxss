@@ -1,0 +1,24 @@
+.container{
+  background-color: #fcfef0;
+  width: 100vw;
+  height: 100vh;
+}
+.connect-us{
+  font-size: 14px;
+}
+.connect-method{
+  margin-top: 20px;
+}
+.method-title{
+  text-align: center;
+}
+.QR-Code{
+  width:200px;
+  height: 200px;
+}
+.title-tips{
+  margin-top:20rpx;
+  text-align: center;
+  font-size: 14px;
+  color:red;
+}
